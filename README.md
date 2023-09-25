@@ -1,3 +1,4 @@
+
 # Qwik City App ⚡️
 
 - [Qwik Docs](https://qwik.builder.io/)
@@ -7,6 +8,18 @@
 - [Vite](https://vitejs.dev/)
 
 ---
+
+## Roadmap
+1. Integrate with CMS Wordpress
+2. Integrate with LDAP (main portal)
+3. PWA Support
+
+content:
+a. load Artikel Harian Perpus
+b. Link Menu to LMS
+c. Link Menu to Lib SLiMS
+d. load Galeri Kegiatan Harian Perpus
+e. Tim Perpus
 
 ## Project Structure
 
