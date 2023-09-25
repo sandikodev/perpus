@@ -1,42 +1,19 @@
-import { component$, useSignal } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { Button } from "~/components/Button";
 
 export default component$(() => {
-  const isOpen = useSignal(false);
 
   return (
-    <div class="min-h-full">
-      <div class="container mx-auto">
-        <header class={`flex ${isOpen.value ? 'items-start' : 'items-center'} justify-center md:justify-between sm:p-2 my-2`}>
-          {/* baru muncul ketika medium keatas */}
-          <div id="header-logo" class="font-semibold hidden md:block">Graha Waskita Kencana</div>
-          <div id="header-menu" class={`flex flex-wrap space-x-2 md:space-x-0 ${!isOpen.value && 'mr-2'}`}>
-            {/* baru muncul ketika small keatas */}
-            <div class={`${isOpen.value ? 'flex flex-col md:flex-row' : 'hidden'} md:flex items-center justify-center`}>
-              <a class="hover:bg-blue-200 p-2 rounded-lg" href="/profile">Profile</a>
-              <a class="hover:bg-blue-200 p-2 rounded-lg" href="https://portal.smpsransa.sch.id/ebook">Ebook</a>
-              <a class="hover:bg-blue-200 p-2 rounded-lg" href="https://drive.smpsransa.sch.id">Drive Sransa</a>
-            </div>
-            <div class={`${isOpen.value ? 'hidden md:flex' : 'flex'} items-center space-x-1 md:space-x-2`}>
-              <a class="bg-blue-200 md:bg-inherit hover:bg-blue-300 p-2 rounded-lg" href="https://lms.smpsransa.sch.id/index.php?p=visitor">Pengunjung</a>
-              <a class="bg-yellow-300 hover:bg-yellow-400 p-2 rounded-lg" href="/dashboard">Dashboard</a>
-            </div>
-            <Button class="md:hidden" isOpen={isOpen} />
+    <div>
+      <section id="hero" class="bg-red-200 h-[80vh] sm:h-[576px] sm:p-5 lg:p-10">
+        <div class="h-full flex flex-col justify-center items-center sm:justify-end sm:items-start">
+          <div class="text-center sm:text-left leading-6 w-full mb-4">
+            <h1 class="text-xl sm:text-2xl">Perpustakaan</h1>
+            <p class="text-2xl sm:text-5xl">SMP Negeri 1 Srandakan</p>
           </div>
-        </header>
-        <main>
-          <h1>Hi 👋</h1>
-          <p>
-            Can't wait to see what you build with qwik!
-            <br />
-            Happy coding.
-          </p>
-        </main>
-        <footer>
-
-        </footer>
-      </div>
+          <a class="bg-blue-300 hover:bg-blue-400 rounded-lg p-2 text-sm sm:text-lg" href="/profile">Kunjungi Profil Perpustakaan</a>
+        </div>
+      </section>
     </div>
   );
 });
