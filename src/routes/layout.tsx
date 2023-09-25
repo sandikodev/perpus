@@ -13,5 +13,25 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 };
 
 export default component$(() => {
-  return <Slot />;
+  return (
+    <div class="min-h-full">
+      <div class="container mx-auto">
+        <header class="flex items-center justify-between p-2">
+          <div id="header-logo">Graha Waskita Kencana</div>
+          <div id="header-menu" class="space-x-2">
+            <a class="hover:bg-blue-300 p-2 rounded-lg" href="https://lms.smpsransa.sch.id">LMS</a>
+            <a href="https://portal.smpsransa.sch.id/ebook">Ebook</a>
+            <a href="https://lms.smpsransa.sch.id/index.php?p=visitor">Pengunjung</a>
+            <a href="/dashboard">Dashboard</a>
+          </div>
+        </header>
+        <main>
+          <Slot />
+        </main>
+        <footer>
+
+        </footer>
+      </div>
+    </div>
+  );
 });
