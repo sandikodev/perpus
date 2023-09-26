@@ -26,6 +26,7 @@ https://www.tailwindawesome.com/resources/bright/demo
 https://www.tailwindawesome.com/resources/banter/demo
 https://cdn.dribbble.com/users/3005802/screenshots/15141571/dribbble_-_mockup.png
 https://www.google.com/search?sca_esv=568251480&sxsrf=AM9HkKlKTtBbN3rtJW_uu3k8elFei7p43A:1695666832160&q=kindergarten+landing+page&tbm=isch&source=lnms&sa=X&ved=2ahUKEwicvsCZs8aBAxXZyDgGHYlzD4QQ0pQJegQIDRAB&biw=824&bih=583&dpr=0.9#imgrc=iivpcZSDV6GheM
+https://mambaui.com/components/breadcrumb
 
 ## Project Structure
 

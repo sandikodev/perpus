@@ -39,3 +39,7 @@ body {
   padding: 0;
   line-height: inherit;
 } */
+
+.zoom:hover img {
+  transform: scale(1.1);
+}

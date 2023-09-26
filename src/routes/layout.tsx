@@ -28,12 +28,13 @@ export default component$(() => {
             {/* baru muncul ketika small keatas */}
             <div class={`${isOpen.value ? 'flex flex-col md:flex-row' : 'hidden'} md:flex items-center justify-center`}>
               <a class="hover:bg-blue-200 p-2 rounded-lg" href="/profile">Profile</a>
+              <a class="hover:bg-blue-200 p-2 rounded-lg" href="/artikel">Artikel</a>
               <a class="hover:bg-blue-200 p-2 rounded-lg" href="https://portal.smpsransa.sch.id/ebook">Ebook</a>
               <a class="hover:bg-blue-200 p-2 rounded-lg" href="https://drive.smpsransa.sch.id">Drive Sransa</a>
             </div>
             <div class={`${isOpen.value ? 'hidden md:flex' : 'flex'} items-center space-x-1 md:space-x-2`}>
               <a class="bg-blue-200 md:bg-inherit hover:bg-blue-300 p-2 rounded-lg" href="https://lib.smpsransa.sch.id/index.php?p=visitor">Pengunjung</a>
-              <a class="bg-yellow-300 hover:bg-yellow-400 p-2 rounded-lg" href="/dashboard">Dashboard</a>
+              <a class="bg-orange-300 hover:bg-yellow-400 p-2 rounded-lg" href="/dashboard">Dashboard</a>
             </div>
             <Button class="md:hidden" isOpen={isOpen} />
           </div>
