@@ -1,25 +1,12 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { Hero } from "~/components/landing/Hero";
 import Img33443311 from '~/media/33443311.jpeg?jsx';
-import LogoSMPN1Srandakan from '~/media/LogoSMPN1Srandakan.png?jsx'
 export default component$(() => {
 
   return (
     <div>
-      <section class="bg-gray-200">
-        <div id="hero" class=" h-[80vh] sm:h-[576px] sm:p-5 lg:p-10 container mx-auto">
-          <div class="h-full flex flex-col justify-center items-center sm:justify-end sm:items-start sm:pb-12">
-            <div class='mx-auto mb-8 sm:mb-14'>
-              <LogoSMPN1Srandakan class="w-14 sm:w-40" />
-            </div>
-            <div class="text-center sm:text-left leading-6 w-full mb-4">
-              <h1 class="text-xl sm:text-2xl font-semibold">Perpustakaan</h1>
-              <p class="text-2xl sm:text-5xl font-bold">SMP Negeri 1 Srandakan</p>
-            </div>
-            <a class="bg-blue-300 hover:bg-blue-400 rounded-lg p-2 text-sm sm:text-lg" href="/profile">Kunjungi Profil Perpustakaan</a>
-          </div>
-        </div>
-      </section>
+      <Hero />
       <section class="container mx-auto flex justify-center">
         <div class="w-full h-auto sm:h-40 text-center grid grid-cols-2 sm:grid-cols-4 -mt-12 max-w-6xl">
           <div class="flex flex-col justify-center hover:animate-bounce hover:bg-gray-900 hover:text-white bg-red-300 rounded-xl p-6 m-2">
