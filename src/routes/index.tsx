@@ -319,7 +319,9 @@ export default component$(() => {
           <div class="grid gap-4">
             <div>
               <img
-                class="h-auto max-w-full rounded-lg"
+                height={280}
+                width={280}
+                class="max-w-full rounded-lg"
                 src="https://www.jagranimages.com/images/newimg/27072020/27_07_2020-shri-kashi-vishwanath-temple_20557350.jpg"
                 alt=""
               />
