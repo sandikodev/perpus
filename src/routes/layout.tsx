@@ -27,6 +27,7 @@ export default component$(() => {
           <div id="header-menu" class={`flex flex-wrap space-x-2 md:space-x-0 ${!isOpen.value && 'mr-2'}`}>
             {/* baru muncul ketika small keatas */}
             <div class={`${isOpen.value ? 'flex flex-col md:flex-row' : 'hidden'} md:flex items-center justify-center`}>
+              <a class="hover:bg-blue-200 p-2 rounded-lg" href="/kunjungan">Laporan</a>
               <a class="hover:bg-blue-200 p-2 rounded-lg" href="/profile">Profile</a>
               <a class="hover:bg-blue-200 p-2 rounded-lg" href="/artikel">Artikel</a>
               <a class="hover:bg-blue-200 p-2 rounded-lg" href="https://portal.smpsransa.sch.id/ebook">Ebook</a>

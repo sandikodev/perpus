@@ -10,7 +10,7 @@ export default component$(() => {
       <section class="container mx-auto flex justify-center">
         <div class="w-full h-auto sm:h-40 text-center grid grid-cols-2 sm:grid-cols-4 -mt-12 max-w-6xl">
           <div class="flex flex-col justify-center hover:animate-bounce hover:bg-gray-900 hover:text-white bg-red-300 rounded-xl p-6 m-2">
-            <div class="text-2xl mb-2 font-semibold">509</div>
+            <div class="text-2xl mb-2 font-semibold">1.668</div>
             <div class="text-sm">Pengunjung</div>
           </div>
           <div class="flex flex-col justify-center hover:animate-bounce hover:bg-gray-900 hover:text-white bg-green-300 rounded-xl p-6 m-2">
@@ -22,7 +22,7 @@ export default component$(() => {
             <div class="text-sm">Minat Baca</div>
           </div>
           <div class="flex flex-col justify-center hover:animate-bounce hover:bg-gray-900 hover:text-white bg-yellow-300 rounded-xl p-6 m-2">
-            <div class="text-2xl mb-2 font-semibold">2.4K</div>
+            <div class="text-2xl mb-2 font-semibold">16.262</div>
             <div class="text-sm">Total Kunjungan</div>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default component$(() => {
               </div>
             </div>
             <div id="card" class="mx-auto group hover:bg-gray-300/80 rounded-full w-54 relative">
-            <div class="rounded-full bg-green-400 absolute top-1 right-1 sm:top-2 sm:right-2 h-10 w-10 text-2xl text-white text-center group-hover:translate-y-0.5 group-hover:translate-x-0.5">2</div>
+              <div class="rounded-full bg-green-400 absolute top-1 right-1 sm:top-2 sm:right-2 h-10 w-10 text-2xl text-white text-center group-hover:translate-y-0.5 group-hover:translate-x-0.5">2</div>
               <Img33443311 class="rounded-full w-32 sm:w-44 mx-auto" id="photo" />
               <div class="text-center mt-4">
                 <h2 class="font-semibold">R. Sandiko</h2>
@@ -51,7 +51,7 @@ export default component$(() => {
               </div>
             </div>
             <div id="card" class="mx-auto group hover:bg-gray-300/80 rounded-full w-54 relative">
-            <div class="rounded-full bg-blue-400 absolute top-1 right-1 sm:top-2 sm:right-2 h-10 w-10 text-2xl text-white text-center group-hover:translate-y-0.5 group-hover:translate-x-0.5">3</div>
+              <div class="rounded-full bg-blue-400 absolute top-1 right-1 sm:top-2 sm:right-2 h-10 w-10 text-2xl text-white text-center group-hover:translate-y-0.5 group-hover:translate-x-0.5">3</div>
               <Img33443311 class="rounded-full w-32 sm:w-44 mx-auto" id="photo" />
               <div class="text-center mt-4">
                 <h2 class="font-semibold">R. Sandiko</h2>
@@ -59,7 +59,7 @@ export default component$(() => {
               </div>
             </div>
             <div id="card" class="mx-auto group hover:bg-gray-300/80 rounded-full w-54 relative">
-            <div class="rounded-full bg-yellow-400 absolute top-1 right-1 sm:top-2 sm:right-2 h-10 w-10 text-2xl text-white text-center group-hover:translate-y-0.5 group-hover:translate-x-0.5">4</div>
+              <div class="rounded-full bg-yellow-400 absolute top-1 right-1 sm:top-2 sm:right-2 h-10 w-10 text-2xl text-white text-center group-hover:translate-y-0.5 group-hover:translate-x-0.5">4</div>
               <Img33443311 class="rounded-full w-32 sm:w-44 mx-auto" id="photo" />
               <div class="text-center mt-4">
                 <h2 class="font-semibold">R. Sandiko</h2>
@@ -367,7 +367,7 @@ export default component$(() => {
         </div>
       </div>
     </div>
-  );
+  )
 });
 
 export const head: DocumentHead = {

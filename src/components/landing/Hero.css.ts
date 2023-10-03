@@ -1,6 +1,6 @@
 import { styled } from 'styled-vanilla-extract/qwik';
 
-export const background = styled.div`
+export const Background = styled.div`
     margin: 0;
     background-size: cover;
     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/full-lonely.jpg") no-repeat center center;

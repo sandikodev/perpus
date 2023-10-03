@@ -1,15 +1,15 @@
 import { component$ } from "@builder.io/qwik";
 import LogoSMPN1Srandakan from '~/media/LogoSMPN1Srandakan.png?jsx'
-import { background } from './Hero.css'
+// import { Background } from './Hero.css'
 export const Hero = component$(() => {
-    const bgImageArray = [
-        "lonely.jpg",
-        "uluwatu.jpg",
-        "carezza-lake.jpg",
-        "batu-bolong-temple.jpg",
-    ],
-        base = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/full-",
-        secs = 4;
+    // const bgImageArray = [
+    //     "lonely.jpg",
+    //     "uluwatu.jpg",
+    //     "carezza-lake.jpg",
+    //     "batu-bolong-temple.jpg",
+    // ],
+    //     base = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/full-",
+    //     secs = 4;
 
     // bgImageArray.forEach((img) => {
     //         new Image().src = base + img;
@@ -46,7 +46,8 @@ export const Hero = component$(() => {
     // backgroundSequence();
 
     return (
-        <section class={background}>
+        <section>
+            {/* <Background> */}
             <div id="hero" class=" h-[80vh] sm:h-[576px] sm:p-5 lg:p-10 container mx-auto">
                 <div class="h-full flex flex-col justify-center items-center sm:justify-end sm:items-start sm:pb-12">
                     <div class='mx-auto mb-8 sm:mb-14'>
@@ -59,6 +60,7 @@ export const Hero = component$(() => {
                     <a class="bg-blue-300 hover:bg-blue-400 rounded-lg p-2 text-sm sm:text-lg" href="/profile">Kunjungi Profil Perpustakaan</a>
                 </div>
             </div>
+            {/* </Background> */}
         </section>
     )
 });
