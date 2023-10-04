@@ -61,3 +61,70 @@ export const Data = [
         web: 976,
     },
 ];
+
+export const Layanan = {
+    buka: "06.30",
+    tutup: "16.00"
+}
+export const Buku = {
+    umum: 0,
+    filsafat: 100,
+    agama: 200,
+    sosial: 300,
+    bahasa: 400,
+    terapan: 600,
+    sdb: 700,
+    sastra: 800,
+    geografi: 900
+}
+
+export const Menu = [
+    {
+        title: 'Laporan',
+        to: '/kunjungan'
+    }, {
+        title: 'Profile',
+        to: '/profile'
+    }, {
+        title: 'Artikel',
+        to: '/artikel'
+    }, {
+        title: 'Ebook',
+        to: 'https://portal.smpsransa.sch.id/ebook'
+    }, {
+        title: 'Drive Sransa',
+        to: 'https://drive.smpsransa.sch.id'
+    }
+]
+
+export const Contact = [
+    { title: "email", detail: 'pustaka@smpsransa.sch.id' },
+    { title: "address", detail: 'Nengahan, Trimurti, Srandakan, Bantul' },
+    { title: "phone", detail: '(0274) 6464726' }
+]
+
+export const JamLayanan = [
+    {
+        day: "senin",
+        time: { start: "06.30", end: "16.00" },
+    }, {
+        day: "selasa",
+        time: { start: "06.30", end: "16.00" },
+    },
+    {
+        day: "rabu",
+        time: { start: "06.30", end: "16.00" },
+    },
+    {
+        day: "kamis",
+        time: { start: "06.30", end: "16.00" },
+    },
+    {
+        day: "jumat",
+        time: { start: "06.30", end: "16.00" },
+    },
+    {
+        day: "sabtu",
+        time: { start: "00.00", end: "00.00" },
+    },
+]

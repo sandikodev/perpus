@@ -36,7 +36,7 @@ export const LineChart = component$<Props>((props) => {
     const myChart = useSignal<HTMLCanvasElement>();
 
     useVisibleTask$(() => {
-        if (myChart?.value) {
+        if (myChart.value) {
             Chart.register(...registerables);
             new Chart(myChart.value, props.data);
         }

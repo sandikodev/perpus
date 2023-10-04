@@ -54,8 +54,8 @@ export const Hero = component$(() => {
                         <LogoSMPN1Srandakan class="w-14 sm:w-40" />
                     </div>
                     <div class="text-center sm:text-left leading-6 w-full mb-4">
-                        <h1 class="text-xl sm:text-2xl font-semibold">Perpustakaan</h1>
-                        <p class="text-2xl sm:text-5xl font-bold">SMP Negeri 1 Srandakan</p>
+                        <h1 class="text-2xl sm:text-5xl font-bold mb-2">Perpustakaan</h1>
+                        <p class="text-sm sm:text-2xl font-semibold">SMP Negeri 1 Srandakan</p>
                     </div>
                     <a class="bg-blue-300 hover:bg-blue-400 rounded-lg p-2 text-sm sm:text-lg" href="/profile">Kunjungi Profil Perpustakaan</a>
                 </div>
