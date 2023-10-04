@@ -90,7 +90,7 @@ export const Menu = [
         to: '/artikel'
     }, {
         title: 'Ebook',
-        to: 'https://portal.smpsransa.sch.id/ebook'
+        to: 'https://ebook.smpsransa.sch.id'
     }, {
         title: 'Drive Sransa',
         to: 'https://drive.smpsransa.sch.id'
