@@ -46,3 +46,6 @@ functions/**/*.js
 # lock
 bun.lockb
 pnpm-lock.yaml
+
+# ENV
+.env

@@ -1,7 +1,58 @@
 import { component$ } from "@builder.io/qwik";
+import { routeLoader$ } from "@builder.io/qwik-city";
+import { wordpressQuery } from "~/utils/WP";
 
+type Post = {
+    title: string,
+    content: string
+}
+
+export const useBlogPosts = routeLoader$(async () => {
+    // This code runs only on the server, after every navigation
+    const data = await wordpressQuery({
+        query: `
+            query LoadAllPosts {
+            posts {
+                nodes {
+                title
+                slug
+                featuredImage {
+                    node {
+                    mediaItemUrl
+                    srcSet
+                    sizes
+                    altText
+                    }
+                }
+                content(format: RENDERED)
+                author {
+                    node {
+                    name
+                    }
+                }
+                }
+            }
+        }`,
+    });
+
+    console.log(data)
+
+    return {
+        title: "judul",
+        content: "isian konten"
+    } as Post
+
+    // return data.posts.nodes.map((article: any) => {
+    //     return {
+    //         params: { slug: article.slug },
+    //         props: { article },
+    //     };
+    // });
+});
 
 export default component$(() => {
+    const signal = useBlogPosts();
+    console.log(signal.value.title)
     return (
         <div>
             <div class="max-w-screen-xl p-5 mx-auto text-white dark:bg-gray-800 dark:text-gray-100 mb-10">
