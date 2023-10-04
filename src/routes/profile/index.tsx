@@ -13,7 +13,10 @@ export default component$(() => {
     return (
         <Pages imageHead={AdminGwk}>
             <div class="max-w-2xl mx-auto">
-                <h1 class="sm:text-2xl text-center mt-10 mb-5 font-semibold">Graha Waskita Kencana</h1>
+                <div class="text-center mt-10 mb-5">
+                    <h1 class="sm:text-2xl font-semibold mb-2">Graha Waskita Kencana</h1>
+                    <p>NPP: 3402011D1000001</p>
+                </div>
                 <div class="flex">
                     <div class="col-span-5 leading-8 text-justify space-y-2 px-4 md:px-0">
                         <p>Perpustakaan <b class="font-medium">SMP Negeri 1 Srandakan</b> merupakan bagian dari instansi pendidikan Sekolah Menengah Pertama di Kapanewon Srandakan. Perpustakaan ini lahir bersamaan dengan lahirnya instansi pendidikan SMP Negeri 1 Srandakan yaitu pada tanggal 1 April 1979. Perpustakaa ini juga lahir bersamaan dengan berdirinya SMP Negeri 1 Srandakan. </p>

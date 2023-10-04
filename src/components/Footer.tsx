@@ -20,6 +20,8 @@ export const Footer = component$(() => {
                                 <TitleFooter title="Informasi" />
                                 <ul class="ml-2">
                                     {Contact.map((contact, id) => (<li key={id} class="mb-1"><b class="font-medium">{contact.title}</b>: {contact.detail}</li>))}
+                                    <li class="mb-1"><b class="font-medium">Instagram</b>: <a href="https://www.instagram.com/grahawaskita">Graha Waskita Kencana</a></li>
+                                    <li class="mb-1"><b class="font-medium">Facebook</b>: <a href="https://www.facebook.com/profile.php?id=100077738111157">FB GWK</a></li>
                                 </ul>
                             </div>
                         </div>

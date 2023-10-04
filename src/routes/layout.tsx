@@ -17,11 +17,11 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 export default component$(() => {
 
   return (
-    <div class="min-h-screen">
+    <div class="flex flex-col min-h-screen">
       <div class="container mx-auto">
         <Header />
       </div>
-      <div>
+      <div class="grow shrink-0 flex flex-col justify-between">
         <main class="mb-10">
           <Slot />
         </main>
