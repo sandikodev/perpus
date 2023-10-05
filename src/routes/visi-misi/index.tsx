@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import AdminGwk from '~/media/admin-graha-waskita-kencana.jpg';
+import AdminGwk from '~/media/sirkulasi-1-graha-waskita-kencana.png';
 import { Pages } from '~/components/layouts/Pages';
 
 export default component$(() => {
