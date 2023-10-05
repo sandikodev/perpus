@@ -66,6 +66,7 @@ export const Layanan = {
     buka: "06.30",
     tutup: "16.00"
 }
+
 export const Buku = {
     umum: 0,
     filsafat: 100,
@@ -80,11 +81,11 @@ export const Buku = {
 
 export const Menu = [
     {
-        title: 'Laporan',
-        to: '/kunjungan'
-    }, {
         title: 'Profile',
         to: '/profile'
+    }, {
+        title: 'Layanan',
+        to: '/fasilitas'
     }, {
         title: 'Artikel',
         to: '/artikel'
