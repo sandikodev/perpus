@@ -85,7 +85,7 @@ export default component$(() => {
                 </div>
                 <div class="grid grid-cols-1 gap-5 lg:grid-cols-4 sm:grid-cols-2">
                     {
-                        signal.value.slice(0, 4).map(post => <Card title={post.title} excerpts={post.content} date={post.date} />)
+                        signal.value.slice(0, 4).map((post, id) => <Card key={id} title={post.title} excerpts={post.content} date={post.date} />)
                     }
                 </div>
             </div>
