@@ -1,10 +1,30 @@
 import { component$ } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
+import { Card } from "~/components/posts/Card";
 import { wordpressQuery } from "~/utils/WP";
+
+type FeaturedImage = {
+    mediaItemUrl: string,
+    srcSet: string,
+    sizes: string,
+    altText: string
+}
+
+type Author = {
+    name: string
+}
 
 type Post = {
     title: string,
-    content: string
+    slug: string,
+    date: string,
+    featuredImage?: {
+        node: FeaturedImage
+    }
+    content: string,
+    author: {
+        node: Author
+    }
 }
 
 export const useBlogPosts = routeLoader$(async () => {
@@ -12,35 +32,37 @@ export const useBlogPosts = routeLoader$(async () => {
     const data = await wordpressQuery({
         query: `
             query LoadAllPosts {
-            posts {
-                nodes {
-                title
-                slug
-                featuredImage {
-                    node {
-                    mediaItemUrl
-                    srcSet
-                    sizes
-                    altText
+                posts {
+                    nodes {
+                        title
+                        slug
+                        date
+                        featuredImage {
+                            node {
+                                mediaItemUrl
+                                srcSet
+                                sizes
+                                altText
+                            }
+                        }
+                        content(format: RENDERED)
+                        author {
+                            node {
+                                name
+                            }
+                        }
                     }
-                }
-                content(format: RENDERED)
-                author {
-                    node {
-                    name
-                    }
-                }
                 }
             }
-        }`,
+        `,
     });
 
-    console.log(data)
+    // console.log(data.posts.nodes)
 
-    return {
-        title: "judul",
-        content: "isian konten"
-    } as Post
+    // return {
+    //     title: "judul",
+    //     content: "isian konten"
+    // } as Post
 
     // return data.posts.nodes.map((article: any) => {
     //     return {
@@ -48,11 +70,12 @@ export const useBlogPosts = routeLoader$(async () => {
     //         props: { article },
     //     };
     // });
+    return data.posts.nodes as Post[]
 });
 
 export default component$(() => {
     const signal = useBlogPosts();
-    console.log(signal.value.title)
+    console.log(signal.value.map(post => post.date.split('T')))
     return (
         <div>
             <div class="max-w-screen-xl p-5 mx-auto text-white dark:bg-gray-800 dark:text-gray-100 mb-10">
@@ -61,58 +84,9 @@ export default component$(() => {
                     <p class="font-bold text-gray-900 text-3xl">Graha Waskita Kencana</p>
                 </div>
                 <div class="grid grid-cols-1 gap-5 lg:grid-cols-4 sm:grid-cols-2">
-                    <div class="relative flex items-end justify-start w-full text-left bg-center bg-cover h-96 dark:bg-gray-500" style="background-image: url(&quot;https://source.unsplash.com/random/240x320&quot;);">
-                        <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b dark:via-transparent dark:from-gray-900 dark:to-gray-900"></div>
-                        <div class="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3">
-                            <a rel="noopener noreferrer" href="#" class="px-3 py-2 text-xs font-semibold tracki uppercase dark:text-gray-100 bgundefined">Politics</a>
-                            <div class="flex flex-col justify-start text-center dark:text-gray-100">
-                                <span class="text-3xl font-semibold leadi tracki">04</span>
-                                <span class="leadi uppercase">Aug</span>
-                            </div>
-                        </div>
-                        <h2 class="z-10 p-5">
-                            <a rel="noopener noreferrer" href="#" class="font-medium text-md hover:underline dark:text-gray-100"> Autem sunt tempora mollitia magnam non voluptates</a>
-                        </h2>
-                    </div>
-                    <div class="relative flex items-end justify-start w-full text-left bg-center bg-cover h-96 dark:bg-gray-500" style="background-image: url(&quot;https://source.unsplash.com/random/241x320&quot;);">
-                        <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b dark:via-transparent dark:from-gray-900 dark:to-gray-900"></div>
-                        <div class="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3">
-                            <a rel="noopener noreferrer" href="#" class="px-3 py-2 text-xs font-semibold tracki uppercase dark:text-gray-100 bgundefined">Health</a>
-                            <div class="flex flex-col justify-start text-center dark:text-gray-100">
-                                <span class="text-3xl font-semibold leadi tracki">01</span>
-                                <span class="leadi uppercase">Aug</span>
-                            </div>
-                        </div>
-                        <h2 class="z-10 p-5">
-                            <a rel="noopener noreferrer" href="#" class="font-medium text-md hover:underline dark:text-gray-100">Inventore reiciendis aliquam excepturi</a>
-                        </h2>
-                    </div>
-                    <div class="relative flex items-end justify-start w-full text-left bg-center bg-cover h-96 dark:bg-gray-500" style="background-image: url(&quot;https://source.unsplash.com/random/242x320&quot;);">
-                        <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b dark:via-transparent dark:from-gray-900 dark:to-gray-900"></div>
-                        <div class="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3">
-                            <a rel="noopener noreferrer" href="#" class="px-3 py-2 text-xs font-semibold tracki uppercase dark:text-gray-100 bgundefined">Science</a>
-                            <div class="flex flex-col justify-start text-center dark:text-gray-100">
-                                <span class="text-3xl font-semibold leadi tracki">28</span>
-                                <span class="leadi uppercase">Jul</span>
-                            </div>
-                        </div>
-                        <h2 class="z-10 p-5">
-                            <a rel="noopener noreferrer" href="#" class="font-medium text-md hover:underline dark:text-gray-100">Officiis mollitia dignissimos commodi optio vero animi</a>
-                        </h2>
-                    </div>
-                    <div class="relative flex items-end justify-start w-full text-left bg-center bg-cover h-96 dark:bg-gray-500" style="background-image: url(&quot;https://source.unsplash.com/random/243x320&quot;);">
-                        <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b dark:via-transparent dark:from-gray-900 dark:to-gray-900"></div>
-                        <div class="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3">
-                            <a rel="noopener noreferrer" href="#" class="px-3 py-2 text-xs font-semibold tracki uppercase dark:text-gray-100 bgundefined">Sports</a>
-                            <div class="flex flex-col justify-start text-center dark:text-gray-100">
-                                <span class="text-3xl font-semibold leadi tracki">19</span>
-                                <span class="leadi uppercase">Jul</span>
-                            </div>
-                        </div>
-                        <h2 class="z-10 p-5">
-                            <a rel="noopener noreferrer" href="#" class="font-medium text-md hover:underline dark:text-gray-100">Doloribus sit illo necessitatibus architecto exercitationem enim</a>
-                        </h2>
-                    </div>
+                    {
+                        signal.value.slice(0, 4).map(post => <Card title={post.title} excerpts={post.content} date={post.date} />)
+                    }
                 </div>
             </div>
             <div class="max-w-screen-xl p-5 mx-auto text-white dark:bg-gray-800 dark:text-gray-100">
