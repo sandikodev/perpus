@@ -6,6 +6,8 @@ export default component$(() => {
         <div class="container mx-auto">
             <div class="flex justify-evenly mt-10">
                 <a class="p-2 bg-red-200 hover:bg-red-300 rounded-lg" href="/admin">Pengelola Perpus</a>
+                <a class="p-2 bg-red-200 hover:bg-red-300 rounded-lg" href="/kunjungan">Laporan Pengunjung</a>
+                <a class="p-2 bg-red-200 hover:bg-red-300 rounded-lg" href="/angkringan">Menu Angkringan</a>
                 <a class="p-2 bg-red-200 hover:bg-red-300 rounded-lg" href="https://drive.smpsransa.sch.id">Google Drive</a>
                 <a class="p-2 bg-red-200 hover:bg-red-300 rounded-lg" href="https://cms.smpsransa.sch.id">CMS Perpus</a>
             </div>
