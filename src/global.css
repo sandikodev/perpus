@@ -6,9 +6,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 @layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
   html {
     font-family: "Poppins", system-ui, sans-serif;
   }
