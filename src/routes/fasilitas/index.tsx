@@ -175,9 +175,23 @@ export default component$(() => {
                         </div>
                     </details>
                 </section>
-                <section class="flex flex-col justify-center my-10 leading-8">
+                <section class="flex flex-col justify-center my-10 leading-8 bg-gray-200 p-2 rounded-lg">
                     <h2 class="font-semibold">Kenali Lebih Lanjut tentang <b>Graha Waskita Kencana</b>:</h2>
-                    <To alter='klik untuk melihat' visit='/visi-misi' custom={{ main: 'text-xl font-semibold', sub: 'px-4 rounded-full' }}>Pelajari Visi dan Misi</To>
+                    <div class="p-2 text-center">
+                        <To alter='klik untuk melihat' visit='/visi-misi' custom={{ main: 'text-xl font-semibold', sub: 'px-4 rounded-full' }}>Pelajari Visi dan Misi</To>
+                    </div>
+                </section>
+                <section class="flex flex-col justify-center my-10 leading-8 bg-gray-200 p-2 rounded-lg">
+                    <h2 class="font-semibold">Lihat Menu <b>Angkringan</b> Graha Waskita Kencana:</h2>
+                    <div class="p-2 text-center">
+                        <To alter='klik untuk melihat' visit='/angkringan' custom={{ main: 'text-xl font-semibold', sub: 'px-4 rounded-full' }}>Apa Menu Lezat Hari Ini ??</To>
+                    </div>
+                </section>
+                <section class="flex flex-col justify-center my-10 leading-8 bg-gray-200 p-2 rounded-lg">
+                    <h2 class="font-semibold"><b>Roadmap</b> Graha Waskita Kencana:</h2>
+                    <div class="p-2 text-center">
+                        <To alter='klik untuk melihat' visit='/galeri' custom={{ main: 'text-xl font-semibold', sub: 'px-4 rounded-full' }}>Mengarungi Perjalanan..</To>
+                    </div>
                 </section>
             </div>
         </Pages>

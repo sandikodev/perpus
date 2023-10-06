@@ -22,7 +22,7 @@ export default component$(() => {
         <Header />
       </div>
       <div class="grow shrink-0 flex flex-col justify-between">
-        <main class="mb-10">
+        <main class="flex flex-1 justify-center">
           <Slot />
         </main>
         <Footer />

@@ -2,7 +2,12 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        kaushan: ['Kaushan Script', 'cursive']
+      },
+    },
   },
   plugins: [],
 };
