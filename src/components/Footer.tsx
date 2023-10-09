@@ -11,16 +11,12 @@ export const Footer = component$(() => {
     useVisibleTask$(({ track }) => {
         track(() => isHide.value)
         localStorage.setItem('hide_footer', String(isHide.value))
-    })
 
-    useOnDocument("load", $(() => {
         const hideFooter = localStorage.getItem('hide_footer')
-        if (hideFooter == null || hideFooter == 'undefined') {
-            localStorage.setItem('hide_footer', defaultIs)
-        } else {
-            isHide.value = Boolean(hideFooter)
+        if (hideFooter) {
+            isHide.value = hideFooter ? true : false
         }
-    }))
+    }, { strategy: 'document-ready' })
 
     return (
         <footer class="relative">
