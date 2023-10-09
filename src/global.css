@@ -2,16 +2,14 @@
  * Tailwind CSS imports
  * View the full documentation at https://tailwindcss.com
  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-  html {
-    font-family: "Poppins", system-ui, sans-serif;
-  }
+html {
+  font-family: "Poppins", system-ui, sans-serif;
 }
 
 /**
